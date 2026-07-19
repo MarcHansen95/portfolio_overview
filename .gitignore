@@ -1,0 +1,10 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Python test / coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
