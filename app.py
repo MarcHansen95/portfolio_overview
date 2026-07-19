@@ -174,13 +174,7 @@ def render_overview_tab(df: pd.DataFrame) -> None:
     st.divider()
     
     # Charts in columns
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        Charts.render_sector_pie_chart(df)
-    
-    with col2:
-        Charts.render_top_holdings_bar_chart(df)
+    Charts.render_top_holdings_bar_chart(df)
         
     
     st.divider()
@@ -193,7 +187,7 @@ def render_overview_tab(df: pd.DataFrame) -> None:
         Charts.render_sector_performance_chart(df, key_suffix="_overview")
     
     with col2:
-        Charts.render_currency_exposure_chart(df)
+        Charts.render_sector_pie_chart(df)
     
     st.divider()
     
@@ -255,6 +249,36 @@ def render_holdings_tab(df: pd.DataFrame) -> None:
     
     # Render table
     Tables.render_holdings_table(sorted_df)
+
+
+def render_edit_holdings_tab(df: pd.DataFrame, source_df: pd.DataFrame | None = None) -> None:
+    """
+    Render a dedicated holdings editor tab.
+
+    Args:
+        df: Filtered DataFrame shown in the editor
+        source_df: Full portfolio DataFrame used for persistence
+    """
+    st.subheader("✏️ Edit Holdings")
+    st.caption("Use this tab to adjust holdings details. Press the button below to save changes to the Excel file.")
+
+    edited_df = Tables.render_holdings_editor(df)
+
+    if st.button("💾 Push changes to production", use_container_width=True, type="primary"):
+        target_df = (source_df if source_df is not None else df).copy()
+
+        for col in edited_df.columns:
+            target_df.loc[edited_df.index, col] = edited_df[col].to_numpy()
+
+        try:
+            DataLoader.save_portfolio_data(target_df)
+            DataLoader.load_portfolio_data.clear()
+            st.session_state.data = target_df
+            st.session_state.filtered_data = target_df
+            st.success("Holdings updated successfully.")
+            st.rerun()
+        except Exception as e:
+            st.error(f"Could not save portfolio data: {str(e)}")
 
 
 def render_sector_analysis_tab(df: pd.DataFrame) -> None:
@@ -365,8 +389,8 @@ def main() -> None:
         st.stop()
     
     # Tabs navigation
-    tab1, tab2, tab3, tab4 = st.tabs(
-        ["📊 Overview", "📋 Holdings", "🏭 Sectors", "📐 Allocation"]
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(
+        ["📊 Overview", "📋 Holdings", "🏭 Sectors", "📐 Allocation", "✏️ Edit Holdings"]
     )
     
     with tab1:
@@ -380,6 +404,9 @@ def main() -> None:
     
     with tab4:
         render_asset_allocation_tab(filtered_data)
+
+    with tab5:
+        render_edit_holdings_tab(filtered_data, data)
 
 
 if __name__ == "__main__":

@@ -95,9 +95,9 @@ class Charts:
         st.plotly_chart(fig, key="type_pie", use_container_width=True)
 
     @staticmethod
-    def render_top_holdings_bar_chart(df: pd.DataFrame, n: int = 10) -> None:
+    def render_top_holdings_bar_chart(df: pd.DataFrame, n: int | None = None) -> None:
         """
-        Render bar chart showing top holdings by value.
+        Render a bar chart showing each holding's allocation share of the portfolio.
 
         Args:
             df: Filtered portfolio DataFrame
@@ -107,39 +107,61 @@ class Charts:
             st.warning("No data available for top holdings")
             return
 
-        # Group by Mapped_Security to get total value across all accounts
-        top_holdings = df.groupby("Mapped_Security", as_index=False).agg({
-            "Value_DKK": "sum"
-        }).nlargest(n, "Value_DKK")
+        total_value = pd.to_numeric(df["Value_DKK"], errors="coerce").sum()
+        if total_value == 0:
+            st.info("No portfolio value to calculate allocation")
+            return
 
-        # For the hover template, get the primary security (largest value) for each mapped security
-        primary_securities = df.loc[df.groupby("Mapped_Security")["Value_DKK"].idxmax(), 
-                                     ["Mapped_Security", "Security"]].reset_index(drop=True)
+        top_holdings = (
+            df.groupby("Mapped_Security", as_index=False)
+            .agg(Value_DKK=("Value_DKK", "sum"))
+        )
+        top_holdings["Display_Name"] = top_holdings["Mapped_Security"]
 
-        # Merge to get security names for hover
-        top_holdings = top_holdings.merge(primary_securities, on="Mapped_Security", how="left")
+        top_holdings["Allocation_Percent"] = (
+            top_holdings["Value_DKK"] / total_value * 100
+        ).round(1)
+        top_holdings = top_holdings.sort_values("Allocation_Percent", ascending=False)
+        if n is not None:
+            top_holdings = top_holdings.head(n)
+        top_holdings = top_holdings.reset_index(drop=True)
 
         fig = px.bar(
             top_holdings,
-            x="Value_DKK",
-            y="Mapped_Security",
-            orientation="h",
-            title=f"Top {n} Holdings by Value",
-            labels={"Value_DKK": "Value (DKK)", "Mapped_Security": "Security"},
-            color="Value_DKK",
+            x="Display_Name",
+            y="Allocation_Percent",
+            title="Portfolio Allocation by Holding",
+            labels={"Display_Name": "Holding", "Allocation_Percent": "Allocation %"},
+            color="Allocation_Percent",
             color_continuous_scale="Blues",
+            text=top_holdings["Allocation_Percent"].astype(str) + "%",
         )
-        
+
         fig.update_traces(
-            hovertemplate="<b>%{y}</b><br>" +
-                         "Security: %{customdata}<br>" +
-                         "Portfolio Value: DKK %{x:,.0f}<extra></extra>",
-            customdata=top_holdings["Security"],
+            hovertemplate="<b>%{x}</b><br>" +
+                         "Allocation: %{y:.0f}%<br>" +
+                         "Value: DKK %{customdata:,.0f}<extra></extra>",
+            customdata=top_holdings["Value_DKK"],
+            textposition="outside",
         )
-        
-        fig.update_layout(height=CHART_HEIGHT, showlegend=False)
-        fig.update_yaxes(autorange="reversed")
-        st.plotly_chart(fig, key="top_holdings", use_container_width=True)
+
+        fig.update_layout(
+            height=max(300, min(900, 28 * len(top_holdings) + 100)),
+            showlegend=False,
+            xaxis_title="Holding",
+            yaxis_title="Allocation %",
+            margin=dict(l=20, r=20, t=60, b=20),
+            xaxis=dict(
+                automargin=True,
+                tickangle=-45,
+            ),
+        )
+        fig.update_xaxes(categoryarray=top_holdings["Display_Name"].tolist(), categoryorder="array")
+        st.plotly_chart(
+            fig,
+            key="top_holdings",
+            use_container_width=True,
+        )
 
     @staticmethod
     def render_sector_performance_chart(df: pd.DataFrame, key_suffix: str = "") -> None:

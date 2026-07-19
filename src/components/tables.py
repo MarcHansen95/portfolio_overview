@@ -110,6 +110,59 @@ class Tables:
         )
 
     @staticmethod
+    def render_holdings_editor(df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Render a data editor for editable holding fields.
+
+        Args:
+            df: Portfolio DataFrame with holdings
+
+        Returns:
+            Edited DataFrame with the same row order as the input
+        """
+        if df.empty:
+            st.warning("No holdings to display")
+            return df.copy()
+
+        editable_columns = [
+            "Mapped_Security",
+            "Type",
+            "Sektor",
+            "Antal",
+            "Price",
+            "Return_Percent",
+            "Currency",
+            "Region",
+            "Platform",
+            "Depot",
+            "TICKER",
+        ]
+
+        available_columns = [col for col in editable_columns if col in df.columns]
+        edit_df = df[available_columns].copy()
+
+        return st.data_editor(
+            edit_df,
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "Mapped_Security": st.column_config.TextColumn("Security"),
+                "Type": st.column_config.TextColumn("Type"),
+                "Sektor": st.column_config.TextColumn("Sector"),
+                "Antal": st.column_config.NumberColumn("Quantity", format="%d"),
+                "Price": st.column_config.NumberColumn("Price (DKK)", format="%.2f"),
+                "Return_Percent": st.column_config.NumberColumn(
+                    "Return %", format="%.2f"
+                ),
+                "Currency": st.column_config.TextColumn("Currency"),
+                "Region": st.column_config.TextColumn("Region"),
+                "Platform": st.column_config.TextColumn("Platform"),
+                "Depot": st.column_config.TextColumn("Depot"),
+                "TICKER": st.column_config.TextColumn("Ticker"),
+            },
+        )
+
+    @staticmethod
     def render_sector_breakdown_table(df: pd.DataFrame) -> None:
         """
         Render sector breakdown table.
