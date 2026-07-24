@@ -93,7 +93,7 @@ class Tables:
 
         st.dataframe(
             table_df,
-            use_container_width=True,
+            width='stretch',
             hide_index=True,
             column_config={
                 "Mapped_Security": st.column_config.TextColumn("Security"),
@@ -143,7 +143,7 @@ class Tables:
 
         return st.data_editor(
             edit_df,
-            use_container_width=True,
+            width='stretch',
             hide_index=True,
             column_config={
                 "Mapped_Security": st.column_config.TextColumn("Security"),
@@ -183,7 +183,7 @@ class Tables:
 
         st.dataframe(
             display_df,
-            use_container_width=True,
+            width='stretch',
             hide_index=True,
             column_config={
                 "Value (DKK)": st.column_config.NumberColumn(
@@ -216,7 +216,7 @@ class Tables:
 
         st.dataframe(
             display_df,
-            use_container_width=True,
+            width='stretch',
             hide_index=True,
             column_config={
                 "Security": st.column_config.TextColumn("Security"),

@@ -54,7 +54,7 @@ class Charts:
         )
         
         fig.update_layout(height=CHART_HEIGHT)
-        st.plotly_chart(fig, key="sector_pie", use_container_width=True)
+        st.plotly_chart(fig, key="sector_pie", width='stretch')
 
     @staticmethod
     def render_type_pie_chart(df: pd.DataFrame) -> None:
@@ -92,7 +92,7 @@ class Charts:
         )
         
         fig.update_layout(height=CHART_HEIGHT)
-        st.plotly_chart(fig, key="type_pie", use_container_width=True)
+        st.plotly_chart(fig, key="type_pie", width='stretch')
 
     @staticmethod
     def render_top_holdings_bar_chart(df: pd.DataFrame, n: int | None = None) -> None:
@@ -160,7 +160,7 @@ class Charts:
         st.plotly_chart(
             fig,
             key="top_holdings",
-            use_container_width=True,
+            width='stretch',
         )
 
     @staticmethod
@@ -210,7 +210,7 @@ class Charts:
         
         fig.update_layout(height=CHART_HEIGHT, showlegend=False)
         key = f"sector_performance{key_suffix}"
-        st.plotly_chart(fig, key=key, use_container_width=True)
+        st.plotly_chart(fig, key=key, width='stretch')
 
     @staticmethod
     def render_return_distribution_chart(df: pd.DataFrame) -> None:
@@ -246,7 +246,7 @@ class Charts:
         
         fig.add_hline(y=0, line_dash="dash", line_color="gray", opacity=0.5)
         fig.update_layout(height=CHART_HEIGHT)
-        st.plotly_chart(fig, key="return_distribution", use_container_width=True)
+        st.plotly_chart(fig, key="return_distribution", width='stretch')
 
     @staticmethod
     def render_currency_exposure_chart(df: pd.DataFrame) -> None:
@@ -283,7 +283,7 @@ class Charts:
         )
         
         fig.update_layout(height=CHART_HEIGHT)
-        st.plotly_chart(fig, key="currency_exposure", use_container_width=True)
+        st.plotly_chart(fig, key="currency_exposure", width='stretch')
 
     @staticmethod
     @st.cache_data(ttl=3600)
@@ -522,4 +522,4 @@ class Charts:
         if display_type == "Relative %":
             fig.update_yaxes(ticksuffix="%")
 
-        st.plotly_chart(fig, key=f"portfolio_performance{key_suffix}", use_container_width=True)
+        st.plotly_chart(fig, key=f"portfolio_performance{key_suffix}", width='stretch')

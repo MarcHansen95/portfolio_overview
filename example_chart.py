@@ -56,4 +56,4 @@ def performance_chart(portfolio):
         showlegend=True
     )
     fig_performance.update_yaxes(ticksuffix="%")
-    st.plotly_chart(fig_performance, use_container_width=True)
+    st.plotly_chart(fig_performance, width='stretch')

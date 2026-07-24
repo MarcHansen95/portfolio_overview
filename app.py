@@ -9,6 +9,7 @@ from src.utils.filters import FilterManager
 from src.components.kpi_cards import KPICard
 from src.components.charts import Charts
 from src.components.tables import Tables
+from src.components.nav import render_nav_tab
 
 
 # Page configuration
@@ -136,12 +137,12 @@ def render_sidebar_filters(df: pd.DataFrame) -> None:
         # Filter buttons
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("🔄 Reset Filters", use_container_width=True):
+            if st.button("🔄 Reset Filters", width='stretch'):
                 FilterManager.reset_filters()
                 st.rerun()
         
         with col2:
-            st.button("✅ Apply", use_container_width=True, disabled=True)
+            st.button("✅ Apply", width='stretch', disabled=True)
         
         # Show filter status
         if FilterManager.are_filters_active():
@@ -264,7 +265,7 @@ def render_edit_holdings_tab(df: pd.DataFrame, source_df: pd.DataFrame | None = 
 
     edited_df = Tables.render_holdings_editor(df)
 
-    if st.button("💾 Push changes to production", use_container_width=True, type="primary"):
+    if st.button("💾 Push changes to production", width='stretch', type="primary"):
         target_df = (source_df if source_df is not None else df).copy()
 
         for col in edited_df.columns:
@@ -351,7 +352,7 @@ def render_asset_allocation_tab(df: pd.DataFrame) -> None:
         st.write("**Geographic Distribution**")
         region_data = df.groupby("Region")["Value_DKK"].sum().reset_index()
         region_data.columns = ["Region", "Value_DKK"]
-        st.dataframe(region_data, use_container_width=True, hide_index=True)
+        st.dataframe(region_data, width='stretch', hide_index=True)
     
     st.divider()
     
@@ -389,8 +390,8 @@ def main() -> None:
         st.stop()
     
     # Tabs navigation
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(
-        ["📊 Overview", "📋 Holdings", "🏭 Sectors", "📐 Allocation", "✏️ Edit Holdings"]
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(
+        ["📊 Overview", "📋 Holdings", "🏭 Sectors", "📐 Allocation", "✏️ Edit Holdings", "💰 NAV"]
     )
     
     with tab1:
@@ -407,6 +408,9 @@ def main() -> None:
 
     with tab5:
         render_edit_holdings_tab(filtered_data, data)
+
+    with tab6:
+        render_nav_tab()
 
 
 if __name__ == "__main__":

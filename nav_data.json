@@ -1,0 +1,801 @@
+[
+  {
+    "date": "2022-02-01",
+    "people": {
+      "marc": {
+        "investments": 248.444,
+        "cash": 8.463,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 0.0,
+        "cash": 0.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2022-03-01",
+    "people": {
+      "marc": {
+        "investments": 268.788,
+        "cash": 8.463,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 0.0,
+        "cash": 0.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2022-04-01",
+    "people": {
+      "marc": {
+        "investments": 274.42,
+        "cash": 14.382,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 0.0,
+        "cash": 0.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2022-05-01",
+    "people": {
+      "marc": {
+        "investments": 276.629,
+        "cash": 20.335,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 0.0,
+        "cash": 0.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2022-06-01",
+    "people": {
+      "marc": {
+        "investments": 274.072,
+        "cash": 44.35,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 0.0,
+        "cash": 0.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2022-07-01",
+    "people": {
+      "marc": {
+        "investments": 309.042,
+        "cash": 48.999,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 0.0,
+        "cash": 0.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2022-08-01",
+    "people": {
+      "marc": {
+        "investments": 303.078,
+        "cash": 54.626,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 375.675,
+        "cash": 230.702,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2022-09-01",
+    "people": {
+      "marc": {
+        "investments": 278.294,
+        "cash": 60.451,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 348.009,
+        "cash": 241.194,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2022-10-01",
+    "people": {
+      "marc": {
+        "investments": 288.566,
+        "cash": 66.549,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 382.612,
+        "cash": 242.223,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2022-11-01",
+    "people": {
+      "marc": {
+        "investments": 308.315,
+        "cash": 76.416,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 404.35,
+        "cash": 244.152,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2022-12-01",
+    "people": {
+      "marc": {
+        "investments": 307.279,
+        "cash": 89.723,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 403.578,
+        "cash": 252.334,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2023-01-01",
+    "people": {
+      "marc": {
+        "investments": 302.814,
+        "cash": 31.425,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 432.025,
+        "cash": 252.263,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2023-02-01",
+    "people": {
+      "marc": {
+        "investments": 301.611,
+        "cash": 2.392,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 447.171,
+        "cash": 252.192,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2023-03-01",
+    "people": {
+      "marc": {
+        "investments": 309.253,
+        "cash": 26.383,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 447.171,
+        "cash": 252.192,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2023-04-01",
+    "people": {
+      "marc": {
+        "investments": 305.182,
+        "cash": 51.103,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 447.171,
+        "cash": 252.192,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2023-05-01",
+    "people": {
+      "marc": {
+        "investments": 316.455,
+        "cash": 58.253,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 465.072,
+        "cash": 275.991,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2023-06-01",
+    "people": {
+      "marc": {
+        "investments": 328.146,
+        "cash": 77.284,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 480.12,
+        "cash": 281.577,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2023-07-01",
+    "people": {
+      "marc": {
+        "investments": 334.432,
+        "cash": 77.284,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 493.221,
+        "cash": 300.718,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2023-08-01",
+    "people": {
+      "marc": {
+        "investments": 320.181,
+        "cash": 77.284,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 494.927,
+        "cash": 300.233,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2023-09-01",
+    "people": {
+      "marc": {
+        "investments": 320.006,
+        "cash": 77.284,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 498.041,
+        "cash": 297.031,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2023-10-01",
+    "people": {
+      "marc": {
+        "investments": 312.688,
+        "cash": 78.484,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 482.719,
+        "cash": 301740.62,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2023-11-01",
+    "people": {
+      "marc": {
+        "investments": 332.74,
+        "cash": 78.484,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 496.602,
+        "cash": 302509.22,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2023-12-01",
+    "people": {
+      "marc": {
+        "investments": 346.943,
+        "cash": 78.484,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 530.33,
+        "cash": 290330.19,
+        "property_value": 0.0,
+        "debt": 1237251.5
+      }
+    }
+  },
+  {
+    "date": "2024-01-01",
+    "people": {
+      "marc": {
+        "investments": 355.644,
+        "cash": 10.859,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 552.065,
+        "cash": 345.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2024-02-01",
+    "people": {
+      "marc": {
+        "investments": 381.82,
+        "cash": 12.862,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 569.048,
+        "cash": 345.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2024-03-01",
+    "people": {
+      "marc": {
+        "investments": 409.518,
+        "cash": 17.942,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 595.285,
+        "cash": 352.988,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2024-04-01",
+    "people": {
+      "marc": {
+        "investments": 434.607,
+        "cash": 36.878,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 596.2,
+        "cash": 355.94,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2024-05-01",
+    "people": {
+      "marc": {
+        "investments": 455.711,
+        "cash": 46.103,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 612.021,
+        "cash": 358.868,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2024-06-01",
+    "people": {
+      "marc": {
+        "investments": 481.162,
+        "cash": 23.021,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 646.638,
+        "cash": 315.765,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2024-07-01",
+    "people": {
+      "marc": {
+        "investments": 428.146,
+        "cash": 75.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 627.023,
+        "cash": 376.658,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2024-08-01",
+    "people": {
+      "marc": {
+        "investments": 434.9,
+        "cash": 81.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 623.881,
+        "cash": 381.658,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2024-09-01",
+    "people": {
+      "marc": {
+        "investments": 459.042,
+        "cash": 75.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 628.861,
+        "cash": 400.658,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2024-10-01",
+    "people": {
+      "marc": {
+        "investments": 468.691,
+        "cash": 75.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 628.581,
+        "cash": 400.658,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2024-11-01",
+    "people": {
+      "marc": {
+        "investments": 493.763,
+        "cash": 75.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 651.156,
+        "cash": 400.658,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2024-12-01",
+    "people": {
+      "marc": {
+        "investments": 496.89,
+        "cash": 75.0,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 656.571,
+        "cash": 400.658,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2025-01-01",
+    "people": {
+      "marc": {
+        "investments": 618.013,
+        "cash": 102.8,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 750.217,
+        "cash": 405.233,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2025-02-01",
+    "people": {
+      "marc": {
+        "investments": 638.818,
+        "cash": 65.037,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 851.298,
+        "cash": 302.433,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2025-03-01",
+    "people": {
+      "marc": {
+        "investments": 592.93,
+        "cash": 60.314,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 790.006,
+        "cash": 302.433,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2025-04-01",
+    "people": {
+      "marc": {
+        "investments": 605.028,
+        "cash": 60.41,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 798.448,
+        "cash": 268.127,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2025-05-01",
+    "people": {
+      "marc": {
+        "investments": 658.938,
+        "cash": 63.505,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 853.934,
+        "cash": 268.609,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2025-06-01",
+    "people": {
+      "marc": {
+        "investments": 664.95,
+        "cash": 72.065,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 856.326,
+        "cash": 268.609,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2025-07-01",
+    "people": {
+      "marc": {
+        "investments": 690.916,
+        "cash": 58.293,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 885.699,
+        "cash": 268.609,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2025-08-01",
+    "people": {
+      "marc": {
+        "investments": 735.183,
+        "cash": 58.412,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 891.203,
+        "cash": 270.061,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2025-09-01",
+    "people": {
+      "marc": {
+        "investments": 770.278,
+        "cash": 58.436,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 916.378,
+        "cash": 270.463,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2025-10-01",
+    "people": {
+      "marc": {
+        "investments": 798.533,
+        "cash": 61.677,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 959.934,
+        "cash": 270.463,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2025-11-01",
+    "people": {
+      "marc": {
+        "investments": 788.421,
+        "cash": 67.087,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 955.13,
+        "cash": 270.463,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  },
+  {
+    "date": "2025-12-01",
+    "people": {
+      "marc": {
+        "investments": 814.428,
+        "cash": 70.009,
+        "property_value": 0.0,
+        "debt": 0.0
+      },
+      "amina": {
+        "investments": 982.788,
+        "cash": 271.655,
+        "property_value": 0.0,
+        "debt": 0.0
+      }
+    }
+  }
+]

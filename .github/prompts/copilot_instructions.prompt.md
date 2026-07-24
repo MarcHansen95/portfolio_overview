@@ -53,7 +53,7 @@ The application loads a static Excel sheet snapshot (no historical data). Becaus
 # Critical Syntax Constraints (Streamlit 2026 Standard)
 You must adhere strictly to modern Streamlit syntax. The legacy `use_container_width` parameter is completely deprecated.
 
-*   **BANNED:** `use_container_width=True` or `use_container_width=False`
+*   **BANNED:** `width='stretch'` or `use_container_width=False`
 *   **REQUIRED:** Use the updated `width` parameter instead:
     *   For full-width container stretching, use: `width="stretch"`
     *   For content-based width fitting, use: `width="content"`
